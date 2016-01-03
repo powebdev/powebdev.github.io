@@ -1,0 +1,21 @@
+{
+  "name": "github-page",
+  "homepage": "http://powebdev.github.io",
+  "authors": [
+    "Po Tong <potong616@gmail.com>"
+  ],
+  "description": "Portfolio Page on GitHub",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  }
+}
