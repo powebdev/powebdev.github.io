@@ -1,0 +1,80 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="project-card">
+	<template>
+
+		<style>
+		.card {
+			background: #fff;
+			border-radius: 2px;
+			display: block;
+			height: 300px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 0;
+			margin-bottom:10px;
+			position: relative;
+			width: 300px;
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		}
+		
+		a {
+			display: inline-block;
+			text-decoration: none !important;
+		}
+
+		@media screen and (max-width: 400px) {
+			a {
+				display: flex;
+			}
+			
+			.card {
+				width: 100%;
+				height: 100px;
+				margin:0;
+				position: static;
+				display: flex;
+				flex-wrap: wrap;
+				box-shadow: none;
+			}
+		}
+		</style>
+
+		<div class="card">
+			<a href={{url}}>
+				<div class="project-img">
+					<picture>
+						<source media="(max-width: 400px)" srcset={{pic_sm}}>
+						<img class="alt-img" src={{pic_reg}} alt="some image">
+					</picture>
+				</div>
+				<div class="project-info">
+					<h4 class="project-title">{{name}}</h4>
+					<p class="project-url">{{url}}</p>
+				</div>
+			</a>
+		</div>
+	</template>
+	<script>
+	Polymer({
+		is: "project-card",
+		properties: {
+			pic_sm: {
+				type: String,
+				value: "../images/vgdb-sm.png"
+			},
+			pic_reg: {
+				type: String,
+				value: "../images/vgdb.png"
+			},
+			name: {
+				type: String,
+				value: "VIDEO GAME CATALOG"
+			},
+			url: {
+				type: String,
+				value: "http://powebdev.github.io/catalog_project"
+			}
+		}
+	});
+	</script>
+</dom-module>

@@ -23,19 +23,20 @@ var projects = [
 
 //create a DOM object with each project and append it to the webpage
 for (var i = 0; i < projects.length; i++) {
-	var HTMLproject = '<div class="project"><div class="project-img"><a href="data-link"><picture><source media="(max-width: 400px)" srcset="data-img-sm"><img class="alt-img" src="data-img-reg" alt="data-img-alt"></picture></a></div><div class="project-info"><h4 class="project-title">data-name</h4><p class="project-url">data-url</p></div></div>';
+	var HTMLproject_card = '<div class="project">';
+	HTMLproject_card = HTMLproject_card + '<project-card ';
+	HTMLproject_card = HTMLproject_card + 'url="%data-url%" ';
+	HTMLproject_card = HTMLproject_card + 'name="%data-name%" ';
+	HTMLproject_card = HTMLproject_card + 'pic_reg="../%data-image-reg%" ';
+	HTMLproject_card = HTMLproject_card + 'pic_sm="../%data-image-sm%">';
+	HTMLproject_card = HTMLproject_card + '</project-card></div>';
 
 //replace placeholder strings with actual data from projects object
-	var map_object = {
-		'data-link': projects[i].url,
-		'data-img-sm': projects[i].small_img,
-		'data-img-reg': projects[i].reg_img,
-		'data-img-alt': projects[i].img_alt,
-		'data-name': projects[i].name,
-		'data-url': projects[i].url
-	};
-
-	HTMLproject = HTMLproject.replace(/data-link|data-img-sm|data-img-reg|data-img-alt|data-name|data-url/gi, function(matched){return map_object[matched];});
-	$(".project-content").append(HTMLproject);
+	HTMLproject_card = HTMLproject_card.replace('%data-url%', projects[i].url);
+	HTMLproject_card = HTMLproject_card.replace('%data-name%', projects[i].name);
+	HTMLproject_card = HTMLproject_card.replace('%data-image-reg%', projects[i].reg_img);
+	HTMLproject_card = HTMLproject_card.replace('%data-image-sm%', projects[i].small_img);
+	$(".project-content").append(HTMLproject_card);
+	
 }
 
