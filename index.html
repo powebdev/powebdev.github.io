@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<title>Portfolio</title>
-		<meta charset="utf-8"> 
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,100,300" rel="stylesheet">
 		<link rel="stylesheet" href="css/styles.css">
+		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<link rel="import" href="elements/project-card.html">
+		<link rel="import" href="elements/element-logo.html">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet'>
+		<link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
 	</head>
+
 	<body>
-		<main>
-			<header>
-				<div class="row header-content">
-					<div class="logo">
-						<img src="images/web.svg" alt="logo">
-					</div>
-					<div class="iama">
-						<h1 class="iama-content">PO TONG</h1>
-						<h2 class="iama-content">FRONT END DEVELOPER</h2>
+		<main class="container">
+			<header class="col-header">
+				<element-logo class="logo"></element-logo>
+				<div class="container link-container">
+					<div class="box-link">
+						<a href="#">
+							<p class="nav-link">Projects</p>
+						</a>
 					</div>
 				</div>
-				<div class="divider">
-					<hr>
+				<div class="me-container">
+					<div class="box-whole" id="name-box">
+						<h1 class="my-name">PO TONG</h1>
+						<p class="job-title">FRONT END DEVELOPER</p>
+					</div>
+					<div class="box-hamburger">
+						<img class="hamburger" src="images/hamburger.png" align="right">
+					</div>
+					<div class="box-whole">
+						<div class="contact">
+							<p>potong616@gmail.com</p>
+							<div class="box-icon">
+								<div class="linked-in-icon">
+									<a href="https://www.linkedin.com/in/potong">
+										<img src="images/In-White-28px-R.png" alt="link to linkedin">
+									</a>
+								</div>
+								<div class="github-icon">
+									<a href="https://github.com/powebdev">
+										<span class="mega-octicon octicon-mark-github light-icon">
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</header>
-			<section>
-				<div class="row banner-content">
-					<img class="col-12 banner" src="images/banner.png" alt="banner">
-				</div>
-			</section>
-			<section>
-				<div class="row project-content">
-					<h3 class="project-header">Projects</h3>
+			<section class="col-content">
+				<div class="container projects-container">
+					<h3 class="projects-header">Projects</h3>
 				</div>
 			</section>
 		</main>
 		<script src="js/jQuery.js"></script>
-		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
+
 </html>

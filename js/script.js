@@ -13,7 +13,8 @@ var projects = [
 	'name': 'VIDEO GAME CATALOG',
 	'url': 'http://powebdev.github.io/catalog_project'
 	},
-	{'small_img': 'images/conference-sm.png',
+	{
+	'small_img': 'images/conference-sm.png',
 	'reg_img': 'images/conference.png',
 	'img_alt': 'Conference',
 	'name': 'CONFERNCE ORGANIZATION APP',
@@ -23,8 +24,8 @@ var projects = [
 
 //create a DOM object with each project and append it to the webpage
 for (var i = 0; i < projects.length; i++) {
-	var HTMLproject_card = '<div class="project">';
-	HTMLproject_card = HTMLproject_card + '<project-card ';
+	var HTMLproject_card = '<div class="project-box">';
+	HTMLproject_card = HTMLproject_card + '<project-card class="card"';
 	HTMLproject_card = HTMLproject_card + 'url="%data-url%" ';
 	HTMLproject_card = HTMLproject_card + 'name="%data-name%" ';
 	HTMLproject_card = HTMLproject_card + 'pic_reg="../%data-image-reg%" ';
@@ -36,7 +37,18 @@ for (var i = 0; i < projects.length; i++) {
 	HTMLproject_card = HTMLproject_card.replace('%data-name%', projects[i].name);
 	HTMLproject_card = HTMLproject_card.replace('%data-image-reg%', projects[i].reg_img);
 	HTMLproject_card = HTMLproject_card.replace('%data-image-sm%', projects[i].small_img);
-	$(".project-content").append(HTMLproject_card);
-	
+	$(".projects-container").append(HTMLproject_card);
 }
+
+/*
+ * Open the drawer when the menu ison is clicked.
+ */
+var hamburger = document.querySelector('.hamburger');
+var nav_links = document.querySelector('.link-container');
+
+hamburger.addEventListener('click', function(e) {
+	nav_links.classList.toggle('link-container-open');
+	e.stopPropagation();
+});	
+
 
