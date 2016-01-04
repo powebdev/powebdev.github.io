@@ -1,24 +1,20 @@
-html
-{
+html {
 	font-family: 'Roboto', sans-serif;
 	height: 100%;
 }
 
-a
-{
+a {
 	text-decoration: none;
 }
 
-h1
-{
+h1 {
 	font-weight: 500;
 	color: white;
 	opacity: 0.87;
 	margin-bottom: 0;
 }
 
-h2
-{
+h2 {
 	font-weight: 400;
 	color: white;
 	opacity: 0.87;
@@ -26,21 +22,18 @@ h2
 	text-align: center;
 }
 
-p
-{
+p {
 	font-weight: 400;
 	color: white;
 	opacity: 0.87;
 }
 
-body
-{
+body {
 	margin: 0;
 	height: 100%;
 }
 
-main
-{
+main {
 	margin: 0;
 	width: 100%;
 	height: 100%;
@@ -48,22 +41,23 @@ main
 	flex-wrap: wrap;
 }
 
-header
-{
+header {
 	background: #170d0c;
 	width: 300px;
 }
 
-section
-{
+section {
 	background: #b0bec5;
 	width: auto;
 	flex-grow: 1;
 	overflow-y: auto;
 }
 
-.logo
-{
+.hamburger {
+	float: right;
+}
+
+.logo {
 	width: auto;
 	display: inline-flex;
 	flex-wrap: wrap;
@@ -72,52 +66,43 @@ section
 	margin-top: 50px;
 }
 
-.container
-{
+.container {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.me-container
-{
+.me-container {
 	margin-top: 100px;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.box-link
-{
+.box-link {
 	width: 50%;
 }
 
-.box-whole
-{
+.box-whole {
 	width: 100%;
 }
 
-.box-hamburger
-{
+.box-hamburger {
 	display: none;
 }
 
-.nav-link
-{
+.nav-link {
 	text-align: center;
 }
 
-.job-title
-{
+.job-title {
 	margin-top: 0;
 	margin-left: 32px;
 }
 
-.contact
-{
+.contact {
 	margin-left: 32px;
 }
 
-.projects-container
-{
+.projects-container {
 	width: 1480px;
 	margin-top: 56px;
 	margin-bottom: 56px;
@@ -125,13 +110,11 @@ section
 	margin-right: auto;
 }
 
-.project-box
-{
+.project-box {
 	width: 25%;
 }
 
-.card
-{
+.card {
 	background: #fff;
 	border-radius: 2px;
 	display: block;
@@ -145,190 +128,154 @@ section
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.light-icon
-{
+.light-icon {
 	color: #fff;
 }
 
-.my-name
-{
+.my-name {
 	margin-left: 32px;
 }
 
-.box-icon
-{
+.box-icon {
 	display: inline-flex;
 }
 
-.linked-in-icon
-{
+.linked-in-icon {
 	margin-top: 2px;
 	margin-bottom: 2px;
 	margin-right: 8px;
 }
 
-.projects-header
-{
+.projects-header {
 	margin-top: 0;
 	font-size: 30pt;
 	opacity: 0.87;
 	width: 100%;
 }
 
-@media screen and (min-width: 1781px)
-{
+@media screen and (min-width: 1781px) {
 }
 
-@media screen and (min-width: 1411px) and (max-width: 1780px)
-{
-	.projects-container
-	{
+@media screen and (min-width: 1411px) and (max-width: 1780px) {
+	.projects-container {
 		width: 1110px;
 	}
 
-	.project-box
-	{
+	.project-box {
 		width: 33.33%;
-	};
+	}
 }
 
-@media screen and (min-width: 1041px) and (max-width: 1410px)
-{
-	.projects-container
-	{
+@media screen and (min-width: 1041px) and (max-width: 1410px) {
+	.projects-container {
 		width: 740px;
 	}
 
-	.project-box
-	{
+	.project-box {
 		width: 50%;
-	};
+	}
 }
 
-@media screen and (min-width: 671px) and (max-width: 1040px)
-{
-	.projects-container
-	{
+@media screen and (min-width: 671px) and (max-width: 1040px) {
+	.projects-container {
 		width: 370px;
 	}
 
-	.project-box
-	{
+	.project-box {
 		width: 100%;
-	};
+	}
 }
 
-@media screen and (min-width: 421px) and (max-width: 670px)
-{
-	header
-	{
+@media screen and (min-width: 421px) and (max-width: 670px) {
+	header {
 		width: 100%;
 	}
 
-	.projects-container
-	{
+	.projects-container {
 		width: 370px;
 	}
 
-	.project-box
-	{
+	.project-box {
 		width: 100%;
 	}
 
-	.me-container
-	{
+	.me-container {
 		margin-top: 0;
 		text-align: center;
-	};
+	}
 }
 
-@media screen and (max-width: 420px)
-{
-	header
-	{
+@media screen and (max-width: 420px) {
+	header {
 		width: 100%;
 	}
 
-	.container
-	{
+	.container {
 		height: 100%;
 		flex-wrap: nowrap;
 		flex-direction: column;
 	}
 
-	.me-container
-	{
+	.me-container {
 		margin-top: 0;
 	}
 
-	.logo
-	{
+	.logo {
 		margin-top: 0;
 		margin-left: 0;
 	}
 
-	.link-container
-	{
+	.link-container {
 		display: none;
 	}
 
-	.link-container-open
-	{
+	.link-container-open {
 		display: block;
 	}
 
-	.box-link
-	{
+	.box-link {
 		width: 100%;
 		height: 40px;
 	}
 
-	.my-name
-	{
+	.my-name {
 		margin-top: 10px;
 		text-align: left;
 	}
 
-	.job-title
-	{
+	.job-title {
 		margin-bottom: 10px;
 		text-align: left;
 	}
 
-	.contact
-	{
+	.contact {
 		display: none;
 	}
 
-	.projects-container
-	{
+	.projects-container {
 		margin: 0;
 		width: 100%;
 	}
 
-	.project-box
-	{
+	.project-box {
 		width: 100%;
 		border-bottom-width: 2px;
 		border-bottom-style: solid;
 		border-bottom-color: #999;
 	}
 
-	#name-box
-	{
+	#name-box {
 		width: 80%;
 	}
 
-	.box-hamburger
-	{
+	.box-hamburger {
 		width: 20%;
 		padding-top: 17px;
 		padding-bottom: 17px;
 		display: inline;
 	}
 
-	.card
-	{
+	.card {
 		background: transparent;
 		border-radius: 0;
 		display: flex;
@@ -339,8 +286,7 @@ section
 		height: 80px;
 	}
 
-	.projects-header
-	{
+	.projects-header {
 		display: none;
-	};
+	}
 }
