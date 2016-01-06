@@ -3,169 +3,150 @@
 	<template>
 
 		<style>
-		.link-layer
-		{
-			left: 0;
-			top: 0;
-			width: 320px;
-			height: 350px;
-			position: absolute;
-			z-index: 1;
+		a {
+			text-decoration: none;
+			margin: 0;
 		}
 
-		.info-layer
-		{
-			left: 0;
-			top: 0;
-			width: 320px;
-			height: 350px;
-			position: absolute;
-			z-index: 0;
-		}
-
-		a
-		{
-			display: inline-block;
-			height: 100%;
-			width: 100%;
-		}
-
-		.project-img-container
-		{
+		div.card {
 			display: block;
-			width: 100%;
-			width: 100%;
-			margin: 0;
 			margin-left: auto;
-			margin-right: 0;
+			margin-right: auto;
+			margin-bottom: 64px;
+			height: 350px;
+			width: 320px;
+			background: #fff;
+			border-radius: 2px;
+			position: relative;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			transition: 0.3s;
+			overflow: hidden;
 		}
 
-		.project-img
-		{
+		div.card:hover {
+			box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+			transition: 0.3s;
+		}
+
+		.show {
+			transform: translate(0, -350px);
+			transition: 0.3s;
+		}
+		
+		.project-img {
 			margin: 0;
-			width: 100%;
+			padding: 0;
+			width: 320px;
 		}
 
-		.project-info
-		{
-			width: 100%;
-			text-align: center;
+		.project-title {
+
 		}
 
-		.project-title
-		{
-			font-size: 24pt;
-			opacity: 0.87;
+		.project-description {
+			position: absolute;
+			background: white;
 			margin: 0;
-		}
-
-		.project-url
-		{
-			color: #000;
-			opacity: 0.38;
-			margin: 0;
+			padding: 8px;
+			top: 350px;
+			opacity: 1;
+			width: 304px;
+			height: 350px;
+			transition: 0.3s;
+			color: #333333;
 		}
 
 		@media screen and (max-width: 420px)
 		{
-
-			.link-layer
-			{
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 80px;
-				position: absolute;
-				z-index: 1;
+			p {
+				display: none;
 			}
 
-			.info-layer
-			{
-				left: 0;
-				top: 0;
+			div.card {
 				width: 100%;
-				height: 80px;
-				position: absolute;
-				z-index: 0;
+				height: 76px;
+				margin: 0;
 				display: flex;
 				flex-wrap: wrap;
+				background: transparent;
+				border-radius: 0;
+				box-shadow: none;
+				transition: initial;
 			}
 
-			.project-img-container
-			{
+			div.card:hover {
+				box-shadow: none;
+				transition: initial;
+			}
+
+			.project-img {
+				margin: 8px;
+				padding: 0;
 				max-width: 60px;
 				max-height: 60px;
-				margin-left: 16px;
-				margin-right: 16px;
-				margin-top: auto;
-				margin-bottom: auto;
-			}
-
-			.project-img
-			{
-				max-width: 60px;
-				max-height: 60px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-
-			.project-info
-			{
-				width: 70%;
-				display: inline;
-				margin-top: auto;
-				margin-bottom: auto;
 			}
 
 			.project-title
 			{
-				width: 100%;
+				display: inline;
 				font-size: 16pt;
 				text-align: left;
+				width: 70%;
+				margin-top: auto;
+				margin-bottom: auto;
 			}
-
-			.project-url
-			{
-				display: none;
-			};
+			.show {
+				transform: initial;
+				transition: initial;
+			}
 		}
+
 		</style>
 
-		<div class="link-layer">
-			<a href="{{url}}"></a>
-		</div>
-		<div class="info-layer">
-			<div class="project-img-container">
+		<div class="card">
+			<a href="{{url}}">
 				<picture>
-					<source media="(max-width: 420px)" srcset={{pic_sm}}>
-					<img class="project-img" src={{pic_reg}} alt="some image">
+					<source media="(max-width: 420px)" srcset={{icon}}>
+					<img class="project-img" src="{{image}}" alt="{{description}}">
 				</picture>
-			</div>
-			<div class="project-info">
-				<h4 class="project-title">{{name}}</h4>
-				<p class="project-url">{{url}}</p>
-			</div>
+			</a>
+			<h3 class="project-title">{{name}}</h3>
+
+			<p>{{dates}}</p>
+			<p class="project-description">{{description}}<br>
+				<a href="{{url}}">project page</a>
+
+			</p>
+
 		</div>
 	</template>
 	<script>
 	Polymer({
 		is: "project-card",
 		properties: {
-			pic_sm: {
+			image: {
 				type: String,
-				value: "../images/vgdb-sm.png"
+				value: ""
 			},
-			pic_reg: {
+			icon: {
 				type: String,
-				value: "../images/vgdb.png"
+				value: ""
 			},
 			name: {
 				type: String,
-				value: "VIDEO GAME CATALOG"
+				value: "PROJECT"
 			},
 			url: {
 				type: String,
-				value: "http://powebdev.github.io/catalog_project"
+				value: "#"
+			},
+			description: {
+				type: String,
+				value: "asdasdasdasdasd"
+			},
+			dates: {
+				type: String,
+				value: "2016"
 			}
 		}
 	});

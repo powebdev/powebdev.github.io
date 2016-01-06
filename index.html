@@ -16,51 +16,64 @@
 
 	<body>
 		<main class="container">
-			<header class="col-header">
+			<header class="box" id="header">
 				<element-logo class="logo"></element-logo>
-				<div class="container link-container">
-					<div class="box-link">
-						<a href="#">
+
+				<div class="link-container">
+					<div class="box" id="link">
+						<a href="index.html">
 							<p class="nav-link">Projects</p>
 						</a>
 					</div>
+
+					<div class="box" id="link">
+						<a href="resume.html">
+							<p class="nav-link">Resume</p>
+						</a>
+					</div>
+					<div class="box" id="link">
+						<a href="index.html">
+							<p class="nav-link">Skills</p>
+						</a>
+					</div>
 				</div>
-				<div class="me-container">
-					<div class="box-whole" id="name-box">
+
+				<div class="container" id="my-info">
+					<div class="box" id="name-title">
 						<h1 class="my-name">PO TONG</h1>
 						<p class="job-title">FRONT END DEVELOPER</p>
 					</div>
-					<div class="box-hamburger">
-						<img class="hamburger" src="images/hamburger.png" alt="">
+
+					<div class="box" id="hamburger">
+						<img id="hamburger" src="images/hamburger.png" alt="">
 					</div>
-					<div class="box-whole">
-						<div class="contact">
-							<p>potong616@gmail.com</p>
-							<div class="box-icon">
-								<div class="linked-in-icon">
-									<a href="https://www.linkedin.com/in/potong">
-										<img src="images/In-White-28px-R.png" alt="link to linkedin">
-									</a>
-								</div>
-								<div class="github-icon">
-									<a href="https://github.com/powebdev">
-										<span class="mega-octicon octicon-mark-github light-icon">
-										</span>
-									</a>
-								</div>
-							</div>
+				</div>
+				<div class="container" id="contact">
+					<p id="email">potong616@gmail.com</p>
+					<div class="container" id="contact-links">
+						<div class="box" id="linkedin">
+							<a href="https://www.linkedin.com/in/potong">
+								<img src="images/In-White-28px-R.png" alt="link to linkedin">
+							</a>
+						</div>
+						<div class="box" id="github">
+							<a href="https://github.com/powebdev">
+								<span class="mega-octicon octicon-mark-github light-icon">
+								</span>
+							</a>
 						</div>
 					</div>
 				</div>
 			</header>
-			<section class="col-content">
-				<div class="container projects-container">
-					<h3 class="projects-header">Projects</h3>
-				</div>
+
+			<section class="box" id="content">
 			</section>
+
 		</main>
 		<script src="js/jQuery.js"></script>
+		<script src="js/data.js"></script>
 		<script src="js/script.js"></script>
+
 	</body>
 
 </html>

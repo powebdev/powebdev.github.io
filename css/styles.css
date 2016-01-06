@@ -53,8 +53,9 @@ section {
 	overflow-y: auto;
 }
 
-.hamburger {
-	float: right;
+.container {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .logo {
@@ -66,158 +67,149 @@ section {
 	margin-top: 50px;
 }
 
-.container {
+.link-container {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.me-container {
-	margin-top: 100px;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.box-link {
+.box#link {
 	width: 50%;
-}
-
-.box-whole {
-	width: 100%;
-}
-
-.box-hamburger {
-	display: none;
 }
 
 .nav-link {
 	text-align: center;
 }
 
+.container#my-info {
+	margin-top: 100px;
+	margin-left: 32px;
+}
+
+.box#name-title {
+	width: 100%;
+}
+
 .job-title {
 	margin-top: 0;
+}
+
+.box#hamburger {
+	display: none;
+	width: 20%;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}
+
+img#hamburger {
+	float: right;
+}
+
+.container#contact {
 	margin-left: 32px;
 }
 
-.contact {
-	margin-left: 32px;
+p#email {
+	width: 100%;
 }
 
-.projects-container {
-	width: 1480px;
-	margin-top: 56px;
-	margin-bottom: 56px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.project-box {
-	width: 25%;
-}
-
-.card {
-	background: #fff;
-	border-radius: 2px;
-	display: block;
-	height: 330px;
-	margin-left: 25px;
-	margin-right: 25px;
-	margin-top: 0;
-	margin-bottom: 40px;
-	position: relative;
-	width: 320px;
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.light-icon {
-	color: #fff;
-}
-
-.my-name {
-	margin-left: 32px;
-}
-
-.box-icon {
+.container#contact-links {
 	display: inline-flex;
 }
 
-.linked-in-icon {
+.box#linkedin {
 	margin-top: 2px;
 	margin-bottom: 2px;
 	margin-right: 8px;
 }
 
-.projects-header {
-	margin-top: 0;
-	font-size: 30pt;
-	opacity: 0.87;
-	width: 100%;
+.light-icon {
+	color: white;
 }
 
-@media screen and (min-width: 1781px) {
+.container#projects {
+	width: 1480px;
+    margin-top: 56px;
+    margin-bottom: 56px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+h3#projects-header {
+	margin-top: 0;
+    font-size: 30pt;
+    opacity: 0.87;
+    width: 100%;
+}
+
+.box#project {
+	width: 25%;
+}
+
 
 @media screen and (min-width: 1411px) and (max-width: 1780px) {
-	.projects-container {
-		width: 1110px;
+	.container#projects {
+		width: 1100px;
 	}
 
-	.project-box {
-		width: 33.33%;
+	.box#project {
+		width: 33%;
 	}
 }
 
 @media screen and (min-width: 1041px) and (max-width: 1410px) {
-	.projects-container {
-		width: 740px;
+	.container#projects {
+		width: 720px;
 	}
 
-	.project-box {
+	.box#project {
 		width: 50%;
 	}
 }
 
 @media screen and (min-width: 671px) and (max-width: 1040px) {
-	.projects-container {
-		width: 370px;
+	.container#projects {
+		width:360px;
 	}
 
-	.project-box {
+	.box#project {
 		width: 100%;
 	}
 }
+
 
 @media screen and (min-width: 421px) and (max-width: 670px) {
 	header {
 		width: 100%;
 	}
 
-	.projects-container {
-		width: 370px;
-	}
-
-	.project-box {
-		width: 100%;
-	}
-
-	.me-container {
+	.container#my-info {
 		margin-top: 0;
 		text-align: center;
 	}
-}
 
-@media screen and (max-width: 420px) {
-	header {
+	.container#contact {
+		display: block;
+		text-align: center;
+	}
+
+	.container#projects {
+		width: 340px;
+	}
+
+	.box#project {
 		width: 100%;
 	}
 
+}
+
+@media screen and (max-width: 420px) {
 	.container {
-		height: 100%;
 		flex-wrap: nowrap;
 		flex-direction: column;
 	}
 
-	.me-container {
-		margin-top: 0;
+	header {
+		width: 100%;
 	}
 
 	.logo {
@@ -233,9 +225,30 @@ section {
 		display: block;
 	}
 
-	.box-link {
-		width: 100%;
-		height: 40px;
+	.container#my-info {
+		margin-top: 0;
+		flex-wrap: wrap;
+		flex-direction: initial;
+	}
+
+	.box#name-title {
+		width: 80%;
+	}
+
+	.box#hamburger {
+		display: inline;
+	}
+
+	.container#contact {
+		display: none;
+	}
+
+	.container#projects {
+		margin: 0;
+	}
+
+	h3#projects-header {
+		display: none;
 	}
 
 	.my-name {
@@ -248,45 +261,19 @@ section {
 		text-align: left;
 	}
 
-	.contact {
-		display: none;
+	.box#link {
+		width: 100%;
+		height: 40px;
 	}
 
-	.projects-container {
-		margin: 0;
+	.container#projects {
 		width: 100%;
 	}
-
-	.project-box {
+	.box#project {
 		width: 100%;
+		height: 80px;
 		border-bottom-width: 2px;
 		border-bottom-style: solid;
 		border-bottom-color: #999;
-	}
-
-	#name-box {
-		width: 80%;
-	}
-
-	.box-hamburger {
-		width: 20%;
-		padding-top: 17px;
-		padding-bottom: 17px;
-		display: inline;
-	}
-
-	.card {
-		background: transparent;
-		border-radius: 0;
-		display: flex;
-		position: relative;
-		width: 100%;
-		box-shadow: none;
-		margin: 0;
-		height: 80px;
-	}
-
-	.projects-header {
-		display: none;
 	}
 }
