@@ -7,11 +7,11 @@ var bio = {
 	'contacts': {
 		'mobile': '555-867-5309',
 		'email': 'potong616@gmail.com',
-		'website': '<a id="website" href="http://powebdev.github.io/">website</a>',
+		'website': '<a id="website" href="http://powebdev.github.io/">Portfolio</a>',
 		'github': 'powebdev',
 		'location': 'Richmond, CA'
 	},
-	'welcomeMessage': 'Happy feast of winter veil',
+	'welcomeMessage': 'Welcome to my site. Here you can check out my projects and my education/work information.',
 	'skills': ['Python', 'HTML5', 'CSS3', 'JavaScript', 'jQuery', 'AJAX', 'Jasmine', 'Java', 'SQLite', 'PostgreSQL', 'Google App Engine', 'AWS', 'Flask', 'Django', 'OAuth', 'Linux', 'Apache', 'Polymer', 'bootstrap', 'API', 'GIMP', 'Inkscape', 'Git', 'Android'],
 	'biopic': 'images/fry.jpg'
 };
