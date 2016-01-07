@@ -1,4 +1,4 @@
-projects.display();
+projects.displayPortfolio();
 
 /*
  * Open the drawer when the menu icon is clicked.

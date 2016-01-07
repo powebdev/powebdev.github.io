@@ -2,7 +2,7 @@
  * construct the page by calling each object's display function.
  */
 bio.display();
-projects.display();
+projects.displayResume();
 education.display();
 work.display();
 

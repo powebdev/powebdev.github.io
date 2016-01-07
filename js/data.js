@@ -2,12 +2,11 @@
  * bio object 
  */
 var bio = {
-	'name': 'Po Tong',
-	'role': 'Front End Developer',
+	'name': 'PO TONG',
+	'role': 'Full Stack Web Developer',
 	'contacts': {
 		'mobile': '555-867-5309',
 		'email': 'potong616@gmail.com',
-		'website': '<a id="website" href="http://powebdev.github.io/">Portfolio</a>',
 		'github': 'powebdev',
 		'location': 'Richmond, CA'
 	},
@@ -219,12 +218,20 @@ work.display = function() {
 var projects = {};
 projects.projects = [
 	{
-		'title': 'Sequoia Wildflowers',
-		'dates': 'Work in progress',
-		'description': 'A website for cataloging wildflowers one may find in the Sequoia National Park. The website was originally a static website and the creator has to update the site manually when new flowers are added. The goal of the project was to convert it into a database backed dynamic website to ease the process of updating the site. The framework of choice for this project is Django and data are stored using SQLite. Current status of the site: The back-end is mostly done, and the next major focus is the layout and to make the site responsive. An API for the site will be implemented in the future. The website is currently hosted on AWS using Apache',
-		'images': ['images/wildflowers.png'],
-		'icon': 'images/wildflowers-sm.png',
-		'url': 'http://ec2-52-32-25-251.us-west-2.compute.amazonaws.com/webapp/wildflowers/'
+		'title': 'Video Game Catalog',
+		'dates': 'December 2015',
+		'description': "A database backed website for cataloging video games. This was created as one of the projects from Udacity's Full Stack Web Developer Nanodegree. Python/Flask was used for the back-end and Bootstrap for the front-end portion. SQLite/SQLAlchemy was used for database management. OAuth 2.0 was also utilize to allow users to login and perform CRUD functionalities on entries belonging to them.",
+		'images': ['images/vgdb.png'],
+		'icon': 'images/vgdb-sm.png',
+		'url': 'http://powebdev.github.io/catalog_project/'
+	},
+	{
+		'title': 'Conference Organization App',
+		'dates': 'December 2015',
+		'description': "A web app which allows users to organize and signup for conferences. This was one of the projects from Udacity's Full Stack Web Developer Nanodegree. The main purpose of this project was to learn how to use Google App Engine to create/host scalable apps. Python was used to write the API endpoints. Google's Cloud Datastore, which is a NoSQL database, was used for data storage. Google+ was utilize to allow users to login and perform CRUD functionalities on entries belonging to them.",
+		'images': ['images/conference.png'],
+		'icon': 'images/conference-sm.png',
+		'url': 'http://powebdev.github.io/p4_conference/'
 	},
 	{
 		'title': 'Website Optimization',
@@ -243,24 +250,45 @@ projects.projects = [
 		'url': 'https://github.com/powebdev/js_frogger'
 	},
 	{
-		'title': 'Video Game Catalog',
-		'dates': 'December 2015',
-		'description': "A database backed website for cataloging video games. This was created as one of the projects from Udacity's Full Stack Web Developer Nanodegree. Python/Flask was used for the back-end and Bootstrap for the front-end portion. SQLite/SQLAlchemy was used for database management. OAuth 2.0 was also utilize to allow users to login and perform CRUD functionalities on entries belonging to them.",
-		'images': ['images/vgdb.png'],
-		'icon': 'images/vgdb-sm.png',
-		'url': 'http://powebdev.github.io/catalog_project/'
+		'title': 'Sequoia Wildflowers',
+		'dates': 'Work in progress',
+		'description': 'A website for cataloging wildflowers one may find in the Sequoia National Park. The website was originally a static website and the creator has to update the site manually when new flowers are added. The goal of the project was to convert it into a database backed dynamic website to ease the process of updating the site. The framework of choice for this project is Django and data are stored using SQLite. Current status of the site: The back-end is mostly done, and the next major focus is the layout and to make the site responsive. An API for the site will be implemented in the future. The website is currently hosted on AWS using Apache',
+		'images': ['images/wildflowers.png'],
+		'icon': 'images/wildflowers-sm.png',
+		'url': 'http://ec2-52-32-25-251.us-west-2.compute.amazonaws.com/webapp/wildflowers/'
 	},
-	{
-		'title': 'Conference Organization App',
-		'dates': 'December 2015',
-		'description': "A web app which allows users to organize and signup for conferences. This was one of the projects from Udacity's Full Stack Web Developer Nanodegree. The main purpose of this project was to learn how to use Google App Engine to create/host scalable apps. Python was used to write the API endpoints. Google's Cloud Datastore, which is a NoSQL database, was used for data storage. Google+ was utilize to allow users to login and perform CRUD functionalities on entries belonging to them.",
-		'images': ['images/conference.png'],
-		'icon': 'images/conference-sm.png',
-		'url': 'http://powebdev.github.io/p4_conference/'
-	}
 ];
 
-projects.display = function() {
+projects.displayResume = function() {
+	var formattedProjectTitle = '';
+	var formattedProjectDates = '';
+	var formattedProjectDescription = '';
+	var formattedProjectImage = '';
+	var numberOfImages = 0;
+	for (var projects_i = 0; projects_i < projects.projects.length; projects_i++) {
+		formattedProjectTitle = HTMLprojectTitle.replace(
+			'%data%', projects.projects[projects_i].title);
+		formattedProjectDates = HTMLprojectDates.replace(
+			'%data%', projects.projects[projects_i].dates);
+		formattedProjectDescription = HTMLprojectDescription.replace(
+			'%data%', projects.projects[projects_i].description);
+
+		$("#projects").append(HTMLprojectStart);
+		$(".project-entry:last").append(formattedProjectTitle);
+		$(".project-entry:last").append(formattedProjectDates);
+		$(".project-entry:last").append(formattedProjectDescription);
+		numberOfImages = projects.projects[projects_i].images.length;
+		if (numberOfImages > 0) {
+			for (var images_i = 0; images_i < numberOfImages; images_i++) {
+				formattedProjectImage = HTMLprojectImage.replace(
+					'%data%', projects.projects[projects_i].images[images_i]);
+				$(".project-entry:last").append(formattedProjectImage);
+			}
+		}
+	}
+};
+
+projects.displayPortfolio = function() {
 	var HTMLprojectContainer = '<div class="container" id="projects"><h3 id="projects-header">Projects</h3></div>';
 	var HTMLprojectCard = '<div class="box" id="project"><project-card name="Portfolio Page" image="" icon="" url="" description="" dates=""></project-card></div>';
 

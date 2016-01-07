@@ -1,12 +1,7 @@
 * {
-	padding: 0;
-	margin: 0;
+	padding:0;
+	margin:0;
 	font-family: 'Roboto', sans-serif;
-}
-
-a#website {
-	display: inline;
-	color: white;
 }
 
 .clearfix {
@@ -25,12 +20,19 @@ h1 {
 	display: inline;
 }
 
-h2, #projects-header {
+h2 {
 	font-weight: bold;
 	font-size: 24px;
 	color: #999999;
 	line-height: 29px;
 	padding: 10px;
+}
+
+h3 {
+	font-style: italic;
+	font-size: 20px;
+	color: #000000;
+	line-height: 22px;
 }
 
 h4 {
@@ -40,11 +42,12 @@ h4 {
 	line-height: 17px;
 }
 
-h2, h4, h5 {
-	padding: 10px;
+h2, h3, h4, h5 {
+	padding:10px;
 	padding-left: 5%;
 	padding-right: 5%;
 }
+
 
 .date-text {
 	font-style: italic;
@@ -60,6 +63,7 @@ h2, h4, h5 {
 	color: #999999;
 	line-height: 16px;
 	float: right;
+
 }
 
 p {
@@ -85,12 +89,6 @@ a {
 #skillsH3 {
 	color: #F5AE23;
 	display: none;
-	padding: 10px;
-	padding-left: 5%;
-	padding-right: 5%;
-	font-style: italic;
-	font-size: 20px;
-	line-height: 22px;
 }
 
 .orange {
@@ -109,7 +107,7 @@ a {
 .gray {
 	background-color: #F3F3F3;
 	padding-bottom: 10px;
-	clear: both;
+	clear:both;
 }
 
 .dark-gray {
@@ -188,11 +186,9 @@ span {
 	#letsConnect {
 		margin-top: 10%;
 	}
-
 	.biopic {
 		width: 150px;
 	}
-
 	.welcome-message {
 		display: none;
 	}
@@ -215,78 +211,5 @@ span {
 	#skillsH3,
 	.biopic {
 		display: block;
-	}
-}
-
-/* style sheet for my projects section */
-#projects-header {
-	width: 100%;
-}
-
-.container#projects {
-	width: 100%;
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.box {
-	width: 25%;
-}
-
-.card {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 64px;
-	height: 350px;
-	width: 320px;
-	background: #fff;
-	border-radius: 2px;
-	position: relative;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-	transition: 0.3s;
-	overflow: hidden;
-}
-
-.card:hover {
-	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-	transition: 0.3s;
-}
-
-.show {
-	transform: translate(0, -350px);
-	transition: 0.3s;
-}
-
-@media screen and (min-width: 1061px) and (max-width: 1410px) {
-	.box#project {
-		width: 33%;
-	}
-}
-
-@media screen and (min-width: 721px) and (max-width: 1060px) {
-	.box#project {
-		width: 50%;
-	}
-}
-
-@media screen and (min-width: 421px) and (max-width: 720px) {
-	.box#project {
-		width: 100%;
-	}
-}
-
-@media screen and (max-width: 420px) {
-
-	.box#project {
-		width: 100%;
-		height: 80px;
-		border-bottom-width: 2px;
-		border-bottom-style: solid;
-		border-bottom-color: #999;
 	}
 }
