@@ -13,7 +13,7 @@ var bio = {
 	},
 	'welcomeMessage': 'Welcome to my site. Here you can check out my projects and my education/work information.',
 	'skills': ['Python', 'HTML5', 'CSS3', 'JavaScript', 'jQuery', 'AJAX', 'Jasmine', 'Java', 'SQLite', 'PostgreSQL', 'Google App Engine', 'AWS', 'Flask', 'Django', 'OAuth', 'Linux', 'Apache', 'Polymer', 'bootstrap', 'API', 'GIMP', 'Inkscape', 'Git', 'Android'],
-	'biopic': 'images/fry.jpg'
+	'biopic': 'images/po.png'
 };
 
 bio.display = function() {
@@ -227,20 +227,20 @@ projects.projects = [
 		'url': 'http://ec2-52-32-25-251.us-west-2.compute.amazonaws.com/webapp/wildflowers/'
 	},
 	{
-		'title': 'My Portfolio Site',
+		'title': 'Website Optimization',
 		'dates': 'January 2016',
-		'description': "My portfolio website. This was created as one of the projects from Udacity's Front-end Web Developer Nanodegree. The main goal of the project was to learn the basics of creating a responsive website. The tools used to create this website are HTML, CSS, and Javascript. Polymer was also used to create custom elements for reusability (the cards for displaying projects and the website logo). Bower was used for package management. New features are constantly being added as I learn/research new languages, libraries, and frameworks.",
-		'images': ['images/portfolio.png'],
-		'icon': 'images/web.svg',
-		'url': 'http://powebdev.github.io/'
+		'description': "This is one of the projets from Udacity's Front End Web Developer Nanodegree. The goal of the project was to optimize a website by analyzing its critical rendering path and also its frame rate performance to ensure people can have a pleasant experience while using the site. The two critical tools used in this projects are Google's PageSpeed Insight and Chrome DevTools. Gulp is also used to create a optimized production version of the site from its devlopment version to be served on the web.",
+		'images': ['images/webperf.png'],
+		'icon': 'images/webperf.png',
+		'url': 'http://powebdev.github.io/webperf/'
 	},
 	{
-		'title': 'Interactive Resume',
+		'title': 'Frogger Style Arcade Game',
 		'dates': 'January 2016',
-		'description': "A web version of my resume. This was created as one of the projects from Udacity's Front-end Web Developer Nanodegree. The skeleton of the webpage was first created using HTML and the information was then generated dynamically using JavaSCript. ALl resume information was contained within its own file which allows easy update of the resume. My portfolio page",
-		'images': ['images/resume.png'],
-		'icon': 'images/resume-sm.png',
-		'url': 'http://powebdev.github.io/interactive_resume/'
+		'description': "A mini-game in the style of classic frogger arcade game. This is one of the projects from Udacity's Front End Web Developer Nanodegree. The goal of the project was to utilize JavaScript's object oriented pattern, more specifically the pseudo-classical pattern to create the entities in the game. The assets and game engine were provided by Udacity.",
+		'images': ['images/frogger.png'],
+		'icon': 'images/frogger.png',
+		'url': 'https://github.com/powebdev/js_frogger'
 	},
 	{
 		'title': 'Video Game Catalog',
